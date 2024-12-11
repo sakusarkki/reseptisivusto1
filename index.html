@@ -4,26 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reseptisivusto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #c20d0d;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .sidebar ul li a:hover {
+            color: #0073e6;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .breadcrumb ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .breadcrumb ul li {
+            margin-right: 10px;
+        }
+        .breadcrumb ul li a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+        .breadcrumb ul li span {
+            margin-right: 10px;
+            color: #555;
+        }
+    </style>
+</head>
 <body>
-    <header>
-        <h1>Reseptisivusto</h1> 
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="profiili.html">Oma profiili</a></li>
-                <li><a href="reseptit.html">Reseptit</a></li>
-                <li><a href="vinkit.html">Vinkit</a></li>
-                <li><a href="contact.html">Ota yhteyttä</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="profiili.html">Oma profiili</a></li>
+            <li><a href="reseptit.html">Reseptit</a></li>
+            <li><a href="vinkit.html">Vinkit</a></li>
+            <li><a href="contact.html">Ota yhteyttä</a></li>
+        </ul>
+    </div>
+    <div class="content">
         <nav class="breadcrumb">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
-                <li><span>></span></li> 
-                <li><a href="reseptit.html">Reseptit</a></li>
                 <li><span>></span></li>
                 <li>Tervetuloa</li>
             </ul>
@@ -31,9 +76,16 @@
 
         <h2>Tervetuloa reseptisivustolle!</h2> 
         <p>Hae reseptejä ja löydä uusia ideoita keittiöön.</p> 
+
+     
         <img src="/tomato.jpg" alt="Reseptit" style="width: 100%; height: auto;"> 
 
-    </main>
+        
+        <video controls style="width: 100%; margin-top: 20px;">
+            <source src="kokki2.mp4" type="video/mp4">
+            Selaimesi ei tue videon toistoa.
+        </video>
+
+    </div>
 </body>
 </html>
-
