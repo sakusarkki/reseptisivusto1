@@ -3,144 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseptihaku</title>
+    <title>Reseptit</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function haeResepti() {
-            const hakusana = document.getElementById("haku").value.toLowerCase();
-            const reseptit = document.querySelectorAll(".resepti");
-
-            let loytyi = false;
-
-            reseptit.forEach(resepti => {
-                if (resepti.textContent.toLowerCase().includes(hakusana)) {
-                    resepti.style.display = "block";
-                    loytyi = true;
-                } else {
-                    resepti.style.display = "none"; 
-                }
-            });
-
-            
-            const viesti = document.getElementById("viesti");
-            if (!loytyi) {
-                viesti.style.display = "block";
-            } else {
-                viesti.style.display = "none";
-            }
-        }
-    </script>
 </head>
 <body>
-    <h1>Reseptihaku</h1>
-    <a href="index.html">Takaisin etusivulle</a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Etusivu</a></li>
-            <li><a href="profiili.html">Oma profiili</a></li>
-            <li><a href="reseptit.html">Reseptit</a></li>
-            <li><a href="vinkit.html">Vinkit</a></li>
-            <li><a href="contact.html">Ota yhteyttä</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Reseptit</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="profiili.html">Oma profiili</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="vinkit.html">Vinkit</a></li>
+                <li><a href="contact.html">Ota yhteyttä</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Hae reseptejä</h2>
+        <input type="text" id="search" placeholder="Hae reseptejä...">
+        <button onclick="searchRecipes()">Hae</button>
 
-    
-    <input type="text" id="haku" onkeyup="haeResepti()" placeholder="Hae resepti...">
+        <div id="recipeList">
+            <!-- Reseptien lista tulee tänne -->
+        </div>
+    </main>
 
-    
-    <p id="viesti" style="display: none; color: red;">Reseptiä ei löytynyt.</p>
-
-    <div class="recipe">
-        <div class="reseptit"> 
-
-            <div class="resepti"> 
-    
-                <h2>Makaronilaatikko</h2> 
-    
-                <ul> 
-    
-                    <li>500 g makaroneja</li> 
-    
-                    <li>400 g jauhelihaa</li> 
-    
-                    <li>5 dl maitoa</li> 
-    
-                    <li>2 kananmunaa</li> 
-    
-                </ul> 
-    
-            </div> 
-    
-            <div class="resepti"> 
-    
-                <h2>Lasagne</h2> 
-    
-                <ul> 
-    
-                    <li>300 g lasagnelevyjä</li> 
-    
-                    <li>500 g jauhelihaa</li> 
-    
-                    <li>400 g tomaattimurskaa</li> 
-    
-                    <li>5 dl maitoa</li> 
-    
-                </ul> 
-    
-            </div> 
-    
-            <div class="resepti"> 
-    
-                <h2>Pinaattikeitto</h2> 
-    
-                <ul> 
-    
-                    <li>200 g pakastepinaattia</li> 
-    
-                    <li>1 litra maitoa</li> 
-    
-                    <li>2 rkl vehnäjauhoja</li> 
-    
-                    <li>1 tl suolaa</li> 
-    
-                </ul> 
-    
-            </div> 
-    
-        </div> 
-    
-        <div class="resepti"> 
-    
-            <h2>Makkaraperunat</h2> 
-    
-            <ul> 
-    
-                <li>300 g perunoita</li> 
-    
-                <li>500 g makkaraa</li> 
-    
-                <li>1 sipuli</li> 
-    
-                <li>1tl mustapippuria</li> 
-    
-            </ul> 
-    
-        </div> 
-    
-        <div class="resepti"> 
-    
-            <h2>Makkarakeitto</h2> 
-    
-            <ul> 
-    
-                <li>300 g makkaraa</li> 
-    
-                <li>pussillinen keittokasviksia</li> 
-    
-                <li>3 lihaliemikuutiota</li> 
-    
-                <li>7dl vettä</li> 
-    
-            </ul> 
-    
-        </div> 
+    <script src="script.js"></script>
+</body>
+<img src="/tomato.jpg" alt="Reseptit" style="width: 100%; height: auto;">
+</html>
