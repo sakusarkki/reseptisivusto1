@@ -6,16 +6,22 @@
     <title>Oma profiili</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header> <nav>
+    <ul>
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="profiili.html">Oma profiili</a></li>
+        <li><a href="reseptit.html">Reseptit</a></li>
+        <li><a href="vinkit.html">Vinkit</a></li>
+        <li><a href="contact.html">Ota yhteyttä</a></li>
+    </ul>
+</nav>
+</header>
 <body>
     <header>
         <h1>Oma profiili</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Etusivu</a></li>
                 <li><a href="profiili.html">Oma profiili</a></li>
-                <li><a href="reseptit.html">Reseptit</a></li>
-                <li><a href="vinkit.html">Vinkit</a></li>
-                <li><a href="contact.html">Ota yhteyttä</a></li>
             </ul>
         </nav>
     </header>
@@ -28,11 +34,23 @@
             <label for="email">Sähköposti:</label>
             <input type="email" id="email" name="email" required><br><br>
 
-            <button type="submit">Tallenna</button>
-        </form>
-    </main>
+            <label for="phone">Puhelinnumero:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder= *><br><br>
 
-    <script src="script.js"></script>
+             <label for="gender">Valitse sukupuolesi:</label><br><br>
+        
+            <input type="radio" id="female" name="gender" value="nainen">
+            <label for="female">Nainen</label><br>
+        
+            <input type="radio" id="male" name="gender" value="mies">
+            <label for="male">Mies</label><br>
+
+            <input type="radio" id="muu" name="gender" value="muu">
+            <label for="other">Muu</label><br><br>
+        
+        <input type="submit" value="Lähetä">
+    </form>
 </body>
+</html>
 <img src="/tomato.jpg" alt="Reseptit" style="width: 100%; height: auto;">
 </html>
