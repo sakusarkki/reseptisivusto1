@@ -3,10 +3,12 @@ document.getElementById('profiiliForm').addEventListener('submit', function(even
     event.preventDefault();
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
+    let phonenumber = document.getElementById('phonenumber').value;
 
     
     localStorage.setItem('name', name);
     localStorage.setItem('email', email);
+    localStorage.setItem('phonenumber', phonenumber);
 
     alert('Profiili tallennettu!');
 });
