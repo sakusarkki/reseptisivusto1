@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseptit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Reseptit</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="profiili.html">Oma profiili</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="vinkit.html">Vinkit</a></li>
+                <li><a href="contact.html">Ota yhteyttä</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Hae reseptejä</h2>
+        <input type="text" id="search" placeholder="Hae reseptejä...">
+        <button onclick="searchRecipes()">Hae</button>
+
+        <div id="recipeList">
+            <!-- Reseptien lista tulee tänne -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+<img src="/tomato.jpg" alt="Reseptit" style="width: 100%; height: auto;">
+</html>
