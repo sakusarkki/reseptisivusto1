@@ -25,7 +25,7 @@ nav ul li {
 nav ul li a {
     color: rgb(138, 30, 30);
     text-decoration:wavy
-    font-weight: bold;
+    font-weight; bold:
 }
 
 main {
@@ -83,5 +83,5 @@ input[type="text"] {
     margin: 0;
     padding: 1px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: solid #ccc;
 }
