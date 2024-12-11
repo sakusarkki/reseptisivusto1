@@ -1,30 +1,87 @@
-document.getElementById('profiiliForm').addEventListener('submit', function(event) 
-{
-    event.preventDefault();
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-
-    
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-
-    alert('Profiili tallennettu!');
-});
-
-
-function searchRecipes() {
-    let query = document.getElementById('search').value.toLowerCase();
-    let recipeList = document.getElementById('recipeList');
-
-
-    recipeList.innerHTML = ''; 
-
-    recipes.forEach(function(recipe) {
-        if (recipe.toLowerCase().includes(query)) {
-            let div = document.createElement('div');
-            div.textContent = recipe;
-            recipeList.appendChild(div);
-        }
-    });
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff3939;
+    margin:0;
+    padding:0;
 }
 
+header {
+    background-color: #ba3e40;
+    color: rgb(12, 12, 12);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: rgb(138, 30, 30);
+    text-decoration:wavy
+    font-weight: bold;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(186, 118, 118);
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #d60e0e;
+    color: rgb(180, 105, 105);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 15px;
+}
+.kuvat img {
+    display: inline-block;
+    width: 45%; 
+    margin-right: 10px; 
+}
+body.reseptihaku {
+    background-image: url('taustakuva.jpg'); 
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+}
+
+
+.reseptit {
+    background: rgba(146, 24, 24, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+input[type="text"] {
+    display:flex;
+    width: 40%;
+    margin: 0;
+    padding: 1px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
