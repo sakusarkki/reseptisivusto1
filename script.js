@@ -1,4 +1,5 @@
-document.getElementById('profiiliForm').addEventListener('submit', function(event) {
+document.getElementById('profiiliForm').addEventListener('submit', function(event) 
+{
     event.preventDefault();
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
@@ -15,11 +16,6 @@ function searchRecipes() {
     let query = document.getElementById('search').value.toLowerCase();
     let recipeList = document.getElementById('recipeList');
 
-    
-    let recipes = [
-        'Kaalikääryleet',
-        'Karjalanpiirakat'
-    ];
 
     recipeList.innerHTML = ''; 
 
