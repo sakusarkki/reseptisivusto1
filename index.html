@@ -4,26 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reseptisivusto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #d82222;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .sidebar ul li a:hover {
+            color: #0073e6;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .breadcrumb ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .breadcrumb ul li {
+            margin-right: 10px;
+        }
+        .breadcrumb ul li a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+        .breadcrumb ul li span {
+            margin-right: 10px;
+            color: #881414;
+        }
+    </style>
+</head>
 <body>
-    <header>
-        <h1>Reseptisivusto</h1> 
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="profiili.html">Oma profiili</a></li>
-                <li><a href="reseptit.html">Reseptit</a></li>
-                <li><a href="vinkit.html">Vinkit</a></li>
-                <li><a href="contact.html">Ota yhteyttä</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="profiili.html">Oma profiili</a></li>
+            <li><a href="reseptit.html">Reseptit</a></li>
+            <li><a href="vinkit.html">Vinkit</a></li>
+            <li><a href="contact.html">Ota yhteyttä</a></li>
+        </ul>
+    </div>
+    <div class="content">
         <nav class="breadcrumb">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
-                <li><span>></span></li> 
-                <li><a href="reseptit.html">Reseptit</a></li>
                 <li><span>></span></li>
                 <li>Tervetuloa</li>
             </ul>
@@ -31,8 +76,77 @@
 
         <h2>Tervetuloa reseptisivustolle!</h2> 
         <p>Hae reseptejä ja löydä uusia ideoita keittiöön.</p> 
-        <img src="/tomato.jpg" alt="Reseptit" style="width: 100%; height: auto;"> 
+        <p>Tämä sivusto on monipuolisen ja terveellisen ruoan ystäville.</p>
+        <p>Helppoja ja nopeita reseptejä.</p>
 
-    </main>
+        <div class="kuvat">
+            <img src="tomato.jpg" alt="Kuva 1">
+            <img src="annos.jpg" alt="Kuva 2">
+        </div>
+
+
+         <video controls style="width: 100%; margin-top: 20px;">
+            <source src="kokki2.mp4" type="video/mp4">
+        </video>
+        Huippukokkien reseptejä
+    </div>
+    <footer>
+        <p>&copy; 2024 Saku Sarkki</p>
+    </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseptit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .recipe {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe h2 {
+            color: #333;
+        }
+
+        .recipe ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .recipe li {
+            padding: 5px 0;
+            font-size: 16px;
+        }
+
+        .recipe .ingredients {
+            font-weight: bold;
+        }
+
+        .recipe .steps {
+            margin-top: 10px;
+        }
+
+        .recipe .steps li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
