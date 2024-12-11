@@ -54,3 +54,12 @@ header nav ul {
 header nav ul li {
     margin: 0 15px; /* Väli linkkien välillä */
 }
+.kuvat img {
+    display: inline-block; /* Asettaa kuvat samalle riville */
+    width: 45%; /* Määrittää kuvien leveyden */
+    margin-right: 10px; /* Väli kuvien välillä */
+}
+
+.kuvat img:last-child {
+    margin-right: 0; /* Poistaa viimeisen kuvan oikean marginaalin */
+}
